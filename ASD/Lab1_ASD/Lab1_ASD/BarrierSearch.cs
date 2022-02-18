@@ -4,6 +4,16 @@ namespace Lab1_ASD;
 
 public static class BarrierSearch
 {
+    private static void CutTheLastElement(LinkedList head)
+    {
+        var iterator = head;
+        while (iterator.Next.Next != null)
+        {
+            iterator = iterator.Next;
+        }
+        iterator.Next = null;
+    }
+    
     public static void Perform(int key, int[] array, LinkedList head)
     {
         InputOutput.BaldLine();
@@ -11,24 +21,21 @@ public static class BarrierSearch
         Console.WriteLine("          Position        Duration (ns)");
         Console.WriteLine("On array:");
         for (int i = 0; i < Program.SearchIterations; i++)
-            Search(key, (int[])array.Clone()).PrintResults();
+        {
+            Search(key, (int[]) array.Clone()).PrintResults();
+        }
+
         Console.WriteLine("On list:");
         for (int i = 0; i < Program.SearchIterations; i++)
         {
             Search(key, head).PrintResults();
-            
-            var iterator = head;
-            while (iterator.Next.Next != null)
-            {
-                iterator = iterator.Next;
-            }
-            iterator.Next = null;
+            CutTheLastElement(head);
         }
 
         InputOutput.BaldLine();
     }
     
-    public static SearchResults Search(int key, int[] array)
+    public static SearchResult Search(int key, int[] array)
     {
         int i = 0, size = array.Length;
         DateTime startTime = DateTime.Now;
@@ -47,10 +54,10 @@ public static class BarrierSearch
             i++;
         }
         
-        return new SearchResults(i < size ? i : "Not Found", DateTime.Now - startTime);
+        return new SearchResult(i < size ? i : "Not Found", DateTime.Now - startTime);
     }
 
-    public static SearchResults Search(int key, LinkedList head)
+    public static SearchResult Search(int key, LinkedList head)
     {
         int i = 0;
         var iterator = head;
@@ -69,6 +76,6 @@ public static class BarrierSearch
             i++;
             iterator = iterator.Next;
         }
-        return new SearchResults(iterator.Next != null ? i : "Not Found", DateTime.Now - startTime);
+        return new SearchResult(iterator.Next != null ? i : "Not Found", DateTime.Now - startTime);
     }
 }

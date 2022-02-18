@@ -9,14 +9,19 @@ public static class LinearSearch
         Console.WriteLine("          Position        Duration (ns)");
         Console.WriteLine("On array:");
         for (int i = 0; i < Program.SearchIterations; i++)
+        {
             Search(key, array).PrintResults();
+        }
         Console.WriteLine("On list:");
         for (int i = 0; i < Program.SearchIterations; i++)
+        {
             Search(key, head).PrintResults();
+        }
+
         InputOutput.BaldLine();
     }
 
-    public static SearchResults Search(int key, int[] array)
+    public static SearchResult Search(int key, int[] array)
     {
         int i = 0, size = array.Length, position = -1;
         bool isFound = false;
@@ -32,10 +37,10 @@ public static class LinearSearch
             i++;
         }
         
-        return new SearchResults(isFound ? position : "Not Found", DateTime.Now - startTime);
+        return new SearchResult(isFound ? position : "Not Found", DateTime.Now - startTime);
     }
     
-    public static SearchResults Search(int key, LinkedList head)
+    public static SearchResult Search(int key, LinkedList head)
     {
         int i = 0, position = -1;
         bool isFound = false;
@@ -53,6 +58,6 @@ public static class LinearSearch
             iterator = iterator.Next;
         }
 
-        return new SearchResults(isFound ? position : "Not Found", DateTime.Now - startTime);
+        return new SearchResult(isFound ? position : "Not Found", DateTime.Now - startTime);
     }
 }

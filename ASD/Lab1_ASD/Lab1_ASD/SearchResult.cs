@@ -1,11 +1,11 @@
 ﻿namespace Lab1_ASD;
 
-public class SearchResults
+public class SearchResult
 {
     public object Result { get; }
     public TimeSpan Duration { get; }
 
-    public SearchResults(object result, TimeSpan duration)
+    public SearchResult(object result, TimeSpan duration)
     {
         Result = result;
         Duration = duration;

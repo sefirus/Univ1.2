@@ -1,19 +1,18 @@
 ﻿namespace Lab1_ASD;
 
-class Program
+static class Program
 {
     public static int SearchIterations = 3;
     
     public static void Main()
     {
-        int command;
         InputOutput.Initiate(out var array, out var list, out var key);
         InputOutput.PrintMenu();
 
         while (true)
         {
             Console.WriteLine("Please, enter a command");
-            int.TryParse(Console.ReadLine(), out command);
+            int.TryParse(Console.ReadLine(), out var command);
             switch (command)
             {
                 case 1:
@@ -23,10 +22,10 @@ class Program
                     BarrierSearch.Perform(key, array, list);
                     break;
                 case 3:
-                    BinarySearch.Perform(key, array, false);
+                    BinarySearch.Perform(key, array, SearchTypes.Regular);
                     break;
                 case 4:
-                    BinarySearch.Perform(key, array, true);
+                    BinarySearch.Perform(key, array, SearchTypes.GoldenRatio);
                     break;
                 case 5:
                     InputOutput.BaldLine();

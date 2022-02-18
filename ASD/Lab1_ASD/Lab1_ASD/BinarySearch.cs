@@ -1,5 +1,11 @@
 ﻿namespace Lab1_ASD;
 
+public enum SearchTypes 
+{
+    Regular,
+    GoldenRatio
+}
+
 public static class BinarySearch
 {
     private static int Partition(int[] array, int startPos, int endPos)
@@ -30,7 +36,7 @@ public static class BinarySearch
         QuickSort(array, pivot + 1, endPos);
     }
     
-    public static void Perform(int key, int[] array, bool isGoldenRatio)
+    public static void Perform(int key, int[] array, SearchTypes searchType)
     {
         InputOutput.BaldLine();
         Console.WriteLine("DISCLAIMER: All the search will be performed on the sorted array:");
@@ -42,17 +48,18 @@ public static class BinarySearch
         Console.WriteLine("          Position        Duration (ns)");
         Console.WriteLine("On array:");
         for (int i = 0; i < Program.SearchIterations; i++)
-            Search(key, x, isGoldenRatio).PrintResults();
-
+        {
+            Search(key, x, searchType).PrintResults();
+        }
         InputOutput.BaldLine();
     }
 
-    public static SearchResults Search(int key, int[] array, bool isGoldenRatio)
+    public static SearchResult Search(int key, int[] array, SearchTypes searchType)
     {
-        int min = 0, max = array.Length - 1, mid = max/2;
+        int min = 0, max = array.Length - 1, mid;
         double lambda = (Math.Sqrt(5) + 1) / 2;
-        double ratio = isGoldenRatio ? 1 + lambda : 2;
-        double multiplyer = isGoldenRatio ? lambda : 1;
+        double ratio = searchType == SearchTypes.Regular ? 1 + lambda : 2;
+        double multiplyer = searchType == SearchTypes.Regular ? lambda : 1;
         
         DateTime start = DateTime.Now;
         while (min <= max)  
@@ -68,6 +75,6 @@ public static class BinarySearch
                 min = mid + 1;  
             }  
         }
-        return new SearchResults(array[max] == key ? max : "Not found", DateTime.Now - start);
+        return new SearchResult(array[max] == key ? max : "Not found", DateTime.Now - start);
     }
 }
