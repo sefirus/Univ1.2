@@ -1,0 +1,15 @@
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\bin\Debug\net6.0\Lab1_ASD.exe
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\bin\Debug\net6.0\Lab1_ASD.deps.json
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\bin\Debug\net6.0\Lab1_ASD.runtimeconfig.json
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\bin\Debug\net6.0\Lab1_ASD.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\bin\Debug\net6.0\ref\Lab1_ASD.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\bin\Debug\net6.0\Lab1_ASD.pdb
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.csproj.AssemblyReference.cache
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.GeneratedMSBuildEditorConfig.editorconfig
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.AssemblyInfoInputs.cache
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.AssemblyInfo.cs
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.csproj.CoreCompileInputs.cache
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\ref\Lab1_ASD.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.pdb
+D:\Univ\OOP\univ\ASD\Lab1_ASD\Lab1_ASD\obj\Debug\net6.0\Lab1_ASD.genruntimeconfig.cache

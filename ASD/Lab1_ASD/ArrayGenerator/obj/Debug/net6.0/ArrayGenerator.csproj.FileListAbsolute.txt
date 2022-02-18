@@ -1,0 +1,15 @@
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\bin\Debug\net6.0\ArrayGenerator.exe
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\bin\Debug\net6.0\ArrayGenerator.deps.json
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\bin\Debug\net6.0\ArrayGenerator.runtimeconfig.json
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\bin\Debug\net6.0\ArrayGenerator.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\bin\Debug\net6.0\ref\ArrayGenerator.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\bin\Debug\net6.0\ArrayGenerator.pdb
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.csproj.AssemblyReference.cache
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.AssemblyInfoInputs.cache
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.AssemblyInfo.cs
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.csproj.CoreCompileInputs.cache
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ref\ArrayGenerator.dll
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.pdb
+D:\Univ\OOP\univ\ASD\Lab1_ASD\ArrayGenerator\obj\Debug\net6.0\ArrayGenerator.genruntimeconfig.cache
