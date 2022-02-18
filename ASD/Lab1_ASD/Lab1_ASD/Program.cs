@@ -2,7 +2,7 @@
 
 class Program
 {
-    public static int SearchIterations = 10;
+    public static int SearchIterations = 3;
     
     public static void Main()
     {

@@ -49,12 +49,16 @@ public static class BinarySearch
 
     public static SearchResults Search(int key, int[] array, bool isGoldenRatio)
     {
-        int min = 0, max = array.Length - 1, mid;
-        double ratio = isGoldenRatio ? (Math.Sqrt(5) + 1)/2 : 2;
+        int min = 0, max = array.Length - 1, mid = max/2;
+        double lambda = (Math.Sqrt(5) + 1) / 2;
+        double ratio = isGoldenRatio ? 1 + lambda : 2;
+        double multiplyer = isGoldenRatio ? lambda : 1;
+        
         DateTime start = DateTime.Now;
         while (min <= max)  
-        {  
-            mid = (int)((min + max) / ratio);
+        {
+            mid = (int)((min + multiplyer*max) / ratio) ; 
+            //Console.WriteLine(mid + "\t" + min + "\t" + max);
             if (key < array[mid])  
             {  
                 max = mid - 1;  
