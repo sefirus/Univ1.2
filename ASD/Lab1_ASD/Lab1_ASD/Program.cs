@@ -22,10 +22,10 @@ static class Program
                     BarrierSearch.Perform(key, array, list);
                     break;
                 case 3:
-                    BinarySearch.Perform(key, array, SearchTypes.Regular);
+                    BinarySearch.Perform(key, array, false);
                     break;
                 case 4:
-                    BinarySearch.Perform(key, array, SearchTypes.GoldenRatio);
+                    BinarySearch.Perform(key, array, true);
                     break;
                 case 5:
                     InputOutput.BaldLine();

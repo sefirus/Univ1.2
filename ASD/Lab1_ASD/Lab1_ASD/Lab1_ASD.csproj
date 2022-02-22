@@ -9,6 +9,11 @@
 
     <ItemGroup>
       <Compile Remove="GoldenRatioBinarySearch.cs" />
+      <Compile Remove="GetList.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Новий Текстовий документ.txt" />
     </ItemGroup>
 
 </Project>

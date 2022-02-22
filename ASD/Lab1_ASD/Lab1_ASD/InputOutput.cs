@@ -62,7 +62,7 @@ public static class InputOutput
         return result.ToArray();
     }
 
-    private static LinkedList GetList(int[] array)
+    public static LinkedList GetList(int[] array)
     {
         int i = array.Length - 1;
         var last = new LinkedList(array[i], null);

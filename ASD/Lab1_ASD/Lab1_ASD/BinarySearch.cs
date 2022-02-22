@@ -1,10 +1,6 @@
-﻿namespace Lab1_ASD;
+﻿using System.Transactions;
 
-public enum SearchTypes 
-{
-    Regular,
-    GoldenRatio
-}
+namespace Lab1_ASD;
 
 public static class BinarySearch
 {
@@ -36,36 +32,42 @@ public static class BinarySearch
         QuickSort(array, pivot + 1, endPos);
     }
     
-    public static void Perform(int key, int[] array, SearchTypes searchType)
+    public static void Perform(int key, int[] array, bool isGoldenRatio)
     {
         InputOutput.BaldLine();
         Console.WriteLine("DISCLAIMER: All the search will be performed on the sorted array:");
-        var x = (int[])array.Clone();
-        QuickSort(x, 0, x.Length - 1);
+        var sortedArray = (int[])array.Clone();
+        QuickSort(sortedArray, 0, sortedArray.Length - 1);
+        var sortedListHead = InputOutput.GetList(sortedArray);
         Console.WriteLine("The sorted array:");
-        InputOutput.PrintArray(x);
+        InputOutput.PrintArray(sortedArray);
         InputOutput.BaldLine();
         Console.WriteLine("          Position        Duration (ns)");
         Console.WriteLine("On array:");
         for (int i = 0; i < Program.SearchIterations; i++)
         {
-            Search(key, x, searchType).PrintResults();
+            Search(key, sortedArray, isGoldenRatio).PrintResults();
+        }
+        Console.WriteLine("On list:");
+        for (int i = 0; i < Program.SearchIterations; i++)
+        {
+            Search(key, sortedListHead, isGoldenRatio).PrintResults();
         }
         InputOutput.BaldLine();
     }
 
-    public static SearchResult Search(int key, int[] array, SearchTypes searchType)
+    public static SearchResult Search(int key, int[] array, bool isGoldenRatio)
     {
         int min = 0, max = array.Length - 1, mid;
+        
         double lambda = (Math.Sqrt(5) + 1) / 2;
-        double ratio = searchType == SearchTypes.Regular ? 1 + lambda : 2;
-        double multiplyer = searchType == SearchTypes.Regular ? lambda : 1;
+        double ratio = isGoldenRatio ? 1 + lambda : 2;
+        double multiplayer = isGoldenRatio ? lambda : 1;
         
         DateTime start = DateTime.Now;
         while (min <= max)  
         {
-            mid = (int)((min + multiplyer*max) / ratio) ; 
-            //Console.WriteLine(mid + "\t" + min + "\t" + max);
+            mid = (int)((min + multiplayer*max) / ratio) ;
             if (key < array[mid])  
             {  
                 max = mid - 1;  
@@ -76,5 +78,55 @@ public static class BinarySearch
             }  
         }
         return new SearchResult(array[max] == key ? max : "Not found", DateTime.Now - start);
+    }
+
+    private static LinkedList GetElement(LinkedList start, int position)
+    {
+        for (int i = 0; i < position; i++)
+        {
+            start = start.Next;
+        }
+        return start;
+    }
+
+    private static int GetLength(LinkedList head)
+    {
+        int i = 0;
+        while (head.Next != null)
+        {
+            i++;
+            head = head.Next;
+        }
+
+        return i;
+    } 
+
+    public static SearchResult Search(int key, LinkedList head, bool isGoldenRatio)
+    {
+        int minIndex = 0, maxIndex = GetLength(head), midIndex = 0;
+        LinkedList minNode = head, maxNode = null, midNode = null;
+
+        double lambda = (Math.Sqrt(5) + 1) / 2;
+        double ratio = isGoldenRatio ? 1 + lambda : 2;
+        double multiplayer = isGoldenRatio ? lambda : 1;
+        
+        DateTime start = DateTime.Now;
+        while (maxNode == null || minNode.Data != maxNode.Data)  
+        {
+            midIndex = (int)((minIndex + multiplayer*maxIndex) / ratio);
+            midNode = GetElement(minNode, midIndex - minIndex);
+            if (key < midNode.Data)  
+            {  
+                maxNode = midNode;
+                maxIndex = midIndex;
+            }  
+            else  
+            {  
+                minNode = midNode.Next;
+                minIndex = midIndex + 1;
+            }  
+        }
+
+        return new SearchResult(midNode.Data == key ? midIndex : "Not found", DateTime.Now - start);
     }
 }
