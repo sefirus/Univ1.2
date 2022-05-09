@@ -39,8 +39,11 @@ public static class BinarySearch
         var sortedArray = (int[])array.Clone();
         QuickSort(sortedArray, 0, sortedArray.Length - 1);
         var sortedListHead = InputOutput.GetList(sortedArray);
-        Console.WriteLine("The sorted array:");
-        InputOutput.PrintArray(sortedArray);
+        if (array.Length < 1000)
+        {
+            Console.WriteLine("The sorted array:");
+            InputOutput.PrintArray(sortedArray);
+        }
         InputOutput.BaldLine();
         Console.WriteLine("          Position        Duration (ns)");
         Console.WriteLine("On array:");
@@ -99,7 +102,7 @@ public static class BinarySearch
         }
 
         return i;
-    } 
+    }
 
     public static SearchResult Search(int key, LinkedList head, bool isGoldenRatio)
     {
@@ -109,24 +112,24 @@ public static class BinarySearch
         double lambda = (Math.Sqrt(5) + 1) / 2;
         double ratio = isGoldenRatio ? 1 + lambda : 2;
         double multiplayer = isGoldenRatio ? lambda : 1;
-        
+
         DateTime start = DateTime.Now;
-        while (maxNode == null || minNode.Data != maxNode.Data)  
+        while (maxNode == null || minNode.Data != maxNode.Data)
         {
-            midIndex = (int)((minIndex + multiplayer*maxIndex) / ratio);
+            midIndex = (int) ((minIndex + multiplayer * maxIndex) / ratio);
             midNode = GetElement(minNode, midIndex - minIndex);
-            if (key < midNode.Data)  
-            {  
+            if (key <= midNode.Data)
+            {
                 maxNode = midNode;
                 maxIndex = midIndex;
-            }  
-            else  
-            {  
+            }
+            else
+            {
                 minNode = midNode.Next;
                 minIndex = midIndex + 1;
-            }  
+            }
         }
 
-        return new SearchResult(midNode.Data == key ? midIndex : "Not found", DateTime.Now - start);
+        return new SearchResult(maxNode.Data == key ? maxIndex : "Not found", DateTime.Now - start);
     }
 }

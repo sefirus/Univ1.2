@@ -2,7 +2,7 @@
 
 static class Program
 {
-    public static int SearchIterations = 3;
+    public static int SearchIterations = 5;
     
     public static void Main()
     {
@@ -52,8 +52,49 @@ static class Program
                     int.TryParse(Console.ReadLine(), out SearchIterations);
                     InputOutput.BaldLine();
                     break;
-                case 10: 
+                case 10:
                     return;
+                case 11:
+                    var data = GenerateArray.Generate(1000, 1000);
+                    InputOutput.BaldLine();
+                    InputOutput.BaldLine();
+                    InputOutput.BaldLine();
+                    Console.WriteLine($"1000 elements, key {data.Key} on position {data.Position}");
+                    Console.WriteLine("Linear Search:");
+                    LinearSearch.Perform(data.Key, data.Array, InputOutput.GetList(data.Array));
+                    Console.WriteLine("Barrier Search:");
+                    BarrierSearch.Perform(data.Key, data.Array, InputOutput.GetList(data.Array));
+                    Console.WriteLine("Normal binary Search:");
+                    BinarySearch.Perform(data.Key, data.Array, false);
+                    Console.WriteLine("Gold binary Search:");
+                    BinarySearch.Perform(data.Key, data.Array, true);
+                    
+                    InputOutput.BaldLine();
+                    InputOutput.BaldLine();
+                    InputOutput.BaldLine();
+                    
+                    data = GenerateArray.Generate(1000000, 1000);
+                    Console.WriteLine($"1000000 elements, key {data.Key} on position {data.Position}");
+                    Console.WriteLine($"1000 elements, key {data.Key} on position {data.Position}");
+                    Console.WriteLine("Linear Search:");
+                    LinearSearch.Perform(data.Key, data.Array, InputOutput.GetList(data.Array));
+                    Console.WriteLine("Barrier Search:");
+                    BarrierSearch.Perform(data.Key, data.Array, InputOutput.GetList(data.Array));
+                    Console.WriteLine("Normal binary Search:");
+                    BinarySearch.Perform(data.Key, data.Array, false);
+                    Console.WriteLine("Gold binary Search:");
+                    BinarySearch.Perform(data.Key, data.Array, true);
+                    break;
+                case 12:
+                    var tail = new LinkedList(int.Parse(Console.ReadLine()), null);
+                    LinkedList counter = tail;
+                    for (int i = 0; i < 14; i++)
+                    {
+                        var buff = new LinkedList(int.Parse(Console.ReadLine()), null);
+                        buff.Next = counter;
+                        counter = buff;
+                    }
+                    break;
                 default:
                     InputOutput.BaldLine();
                     Console.WriteLine("Wrong command");

@@ -18,6 +18,7 @@ public static class InputOutput
         Console.WriteLine("8. To print the menu");
         Console.WriteLine("9. To change search iterations count");
         Console.WriteLine("10. To exit");
+        Console.WriteLine("11. To run full tests");
         BaldLine();
     }
 
