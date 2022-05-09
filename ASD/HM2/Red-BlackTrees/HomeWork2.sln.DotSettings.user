@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=291b3b5a_002D42db_002D42e3_002Da927_002Dd475539395d9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Intersecting2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::BA499F72-D3A4-4EA6-A236-01646742DB41::net6.0::SchemeTests.UnitTest1.Intersecting2&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f8fcc278_002D8f8b_002D48b3_002D88c5_002D7f9b4f9f4062/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Intersecting2 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::BA499F72-D3A4-4EA6-A236-01646742DB41::net6.0::SchemeTests.UnitTest1&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=92427d8d_002Df91d_002D412d_002D9f6f_002D51f2ef8973f3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NotInter3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::BA499F72-D3A4-4EA6-A236-01646742DB41::net6.0::SchemeTests.UnitTest1&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=48e6cf88_002D2e2f_002D4a5d_002D9d81_002Dc0cfc04befcb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Sashs\AppData\Local\JetBrains\Rider2022.1\resharper-host\temp\Rider\vAny\CoverageData\_Red-BlackTrees.192070147\Snapshot\snapshot.utdcvr</s:String></wpf:ResourceDictionary>

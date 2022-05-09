@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Red-BlackTrees", "Red-BlackTrees\Red-BlackTrees.csproj", "{02055310-8CDD-4634-9DA6-FD3DC8B14607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemeTests", "SchemeTests\SchemeTests.csproj", "{BA499F72-D3A4-4EA6-A236-01646742DB41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02055310-8CDD-4634-9DA6-FD3DC8B14607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02055310-8CDD-4634-9DA6-FD3DC8B14607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02055310-8CDD-4634-9DA6-FD3DC8B14607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02055310-8CDD-4634-9DA6-FD3DC8B14607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA499F72-D3A4-4EA6-A236-01646742DB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA499F72-D3A4-4EA6-A236-01646742DB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA499F72-D3A4-4EA6-A236-01646742DB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA499F72-D3A4-4EA6-A236-01646742DB41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
